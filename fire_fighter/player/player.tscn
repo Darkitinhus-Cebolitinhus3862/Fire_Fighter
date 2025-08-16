@@ -1,23 +1,23 @@
 [gd_scene load_steps=9 format=3 uid="uid://yjv1530fa7yb"]
 
-[ext_resource type="Script" uid="uid://c14mmpiqa7c3g" path="res://player/player.gd" id="1_2hs0m"]
-[ext_resource type="Texture2D" uid="uid://cp8ofo3e4cjfs" path="res://art/Player/Sprite_2-2.png" id="1_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://dg6x6p1fvfi3y" path="res://art/Player/Sprite_3-2.png" id="2_hqtel"]
-[ext_resource type="Texture2D" uid="uid://bre4bo1uvnsnq" path="res://art/Player/Sprite_4-2.png" id="3_sweqy"]
-[ext_resource type="Texture2D" uid="uid://dxt4xqvhf4e8b" path="res://art/Player/Sprite_5-2.png" id="4_sweqy"]
-[ext_resource type="Texture2D" uid="uid://c5yrqncsppap" path="res://art/Player/Sprite_6-2.png" id="5_2hs0m"]
+[ext_resource type="Script" uid="uid://c14mmpiqa7c3g" path="res://player/Player.gd" id="1_aqcbf"]
+[ext_resource type="Texture2D" uid="uid://cp8ofo3e4cjfs" path="res://art/Player/Sprite_2-2.png" id="2_gskgj"]
+[ext_resource type="Texture2D" uid="uid://dxt4xqvhf4e8b" path="res://art/Player/Sprite_5-2.png" id="3_06mnu"]
+[ext_resource type="Texture2D" uid="uid://c5yrqncsppap" path="res://art/Player/Sprite_6-2.png" id="4_mhpjh"]
+[ext_resource type="Texture2D" uid="uid://dg6x6p1fvfi3y" path="res://art/Player/Sprite_3-2.png" id="5_ndjxb"]
+[ext_resource type="Texture2D" uid="uid://bre4bo1uvnsnq" path="res://art/Player/Sprite_4-2.png" id="6_5qrx2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_i3pqv")
+"texture": ExtResource("2_gskgj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_sweqy")
+"texture": ExtResource("3_06mnu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_2hs0m")
+"texture": ExtResource("4_mhpjh")
 }],
 "loop": true,
 "name": &"up",
@@ -25,19 +25,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_i3pqv")
+"texture": ExtResource("2_gskgj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_hqtel")
+"texture": ExtResource("5_ndjxb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_sweqy")
+"texture": ExtResource("6_5qrx2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_sweqy")
+"texture": ExtResource("3_06mnu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_2hs0m")
+"texture": ExtResource("4_mhpjh")
 }],
 "loop": true,
 "name": &"walk",
@@ -48,8 +48,8 @@ animations = [{
 size = Vector2(56, 56)
 
 [node name="Player" type="Area2D"]
-position = Vector2(246, 222)
-script = ExtResource("1_2hs0m")
+position = Vector2(680, 360)
+script = ExtResource("1_aqcbf")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.7, 0.7)

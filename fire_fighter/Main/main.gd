@@ -3,9 +3,6 @@ extends Node
 @export var mob_scene: PackedScene
 var score
 
-func _ready():
-	new_game()
-
 func game_over():
 	$ScoreTimer.stop()
 	$MobTimer.stop()
@@ -18,6 +15,7 @@ func new_game():
 func _on_start_timer_timeout() -> void:
 	$MobTimer.start()
 	$ScoreTimer.start()
+	print("iniciando")
 
 func _on_score_timer_timeout() -> void:
 	score += 1
@@ -31,7 +29,7 @@ func _on_mob_timer_timeout() -> void:
 	
 	mob = mob_scene.instantiate()
 
-	mob_spawn_location = $MobPath/CaminhoBola
+	mob_spawn_location = $MobPath/LocalGeracao
 	mob_spawn_location.progress_ratio = randf()
 
 	mob.position = mob_spawn_location.position
@@ -45,3 +43,6 @@ func _on_mob_timer_timeout() -> void:
 	mob.linear_velocity = velocity.rotated(direction)
 
 	add_child(mob)
+	
+func _ready():
+	new_game()

@@ -1,3 +1,26 @@
-[gd_scene format=3 uid="uid://brotwfsp0251t"]
+[gd_scene load_steps=2 format=3 uid="uid://brotwfsp0251t"]
+
+[sub_resource type="Curve2D" id="Curve2D_50cra"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1280, 0, 0, 0, 0, 0, 1280, 720, 0, 0, 0, 0, 0, 720, 0, 0, 0, 0, 0, 0)
+}
+point_count = 5
 
 [node name="Node" type="Node"]
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.7
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(680, 360)
+
+[node name="MobPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_50cra")
+
+[node name="LocalGeracao" type="PathFollow2D" parent="MobPath"]
